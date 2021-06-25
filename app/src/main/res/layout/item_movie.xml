@@ -24,10 +24,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:fontFamily="@font/karla"
+        android:fontFamily="@font/didact_gothic"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:textSize="24sp"
+        android:textStyle="normal"
         tools:text="Cruella" />
 
     <TextView
@@ -38,7 +39,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:fontFamily="@font/chivo"
+        android:fontFamily="@font/didact_gothic"
         android:gravity="left"
         android:paddingRight="10dp"
         android:textSize="14sp"

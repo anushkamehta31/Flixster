@@ -16,6 +16,7 @@ public class Movie {
     String overview;
     String backdropPath;
     double rating;
+    Integer id;
 
     // Constructor takes in JSON object and constructs movie object
     public Movie(JSONObject jsonObject) throws JSONException {
@@ -24,6 +25,7 @@ public class Movie {
         overview = jsonObject.getString("overview");
         backdropPath = jsonObject.getString("backdrop_path");
         rating = jsonObject.getDouble("vote_average");
+        id = jsonObject.getInt("id");
     }
 
     // Method returns to us a list of movies from the JSON array that we received back
@@ -50,6 +52,14 @@ public class Movie {
 
     public String getBackdropPath() {
         return String.format("https://image.tmdb.org/t/p/w342/%s", backdropPath);
+    }
+
+    public String getTrailerPath() {
+        return String.format("https://api.themoviedb.org/3/movie/%s/videos?api_key=64a8bf5b6a5eb9411876b4e84e69391e", id);
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getTitle() {

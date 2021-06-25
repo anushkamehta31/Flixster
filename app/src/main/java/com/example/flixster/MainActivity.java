@@ -19,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String KEY_ITEM_POSITION = "movie_position";
     public static final String KEY_ITEM_RATING = "movie_rating";
     public static final String KEY_ITEM_POSTER = "poster_path";
+    public static final String KEY_TRAILER_ID = "trailer_id";
+    public static final String KEY_TRAILER_PATH = "trailer_path";
+    public static final String KEY_BACKGROUND_PATH = "background_path";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra(KEY_ITEM_POSITION, position);
                 i.putExtra(KEY_ITEM_RATING, movies.get(position).getRating());
                 i.putExtra(KEY_ITEM_POSTER, movies.get(position).getPosterPath());
+                i.putExtra(KEY_TRAILER_ID, movies.get(position).getId());
+                i.putExtra(KEY_TRAILER_PATH, movies.get(position).getTrailerPath());
+                i.putExtra(KEY_BACKGROUND_PATH, movies.get(position).getBackdropPath());
                 // Display activity
                 startActivity(i);
             }

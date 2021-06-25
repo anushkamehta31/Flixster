@@ -3,10 +3,22 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abel</item>
         <item>@font/amiko</item>
+        <item>@font/anton</item>
+        <item>@font/archivo_narrow</item>
         <item>@font/cabin</item>
+        <item>@font/cairo</item>
         <item>@font/cairo_extralight</item>
         <item>@font/chivo</item>
+        <item>@font/crushed</item>
+        <item>@font/didact_gothic</item>
+        <item>@font/fresca</item>
         <item>@font/gudea</item>
+        <item>@font/hammersmith_one</item>
         <item>@font/karla</item>
+        <item>@font/khand_semibold</item>
+        <item>@font/lato</item>
+        <item>@font/roboto</item>
+        <item>@font/roboto_light</item>
+        <item>@font/roboto_thin</item>
     </array>
 </resources>

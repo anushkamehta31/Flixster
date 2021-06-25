@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
@@ -15,10 +15,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        android:paddingLeft="3.4dp"
+        android:paddingLeft="10dp"
         android:paddingTop="10dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <RatingBar
         android:id="@+id/rating"
@@ -30,9 +30,9 @@
         android:layout_marginEnd="12dp"
         android:layout_toEndOf="@+id/ivPoster2"
         android:numStars="5"
-        android:stepSize="0.01"
-        android:paddingTop="10dp"
         android:paddingLeft="2dp"
+        android:paddingTop="10dp"
+        android:stepSize="0.01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivPoster2"
@@ -45,10 +45,10 @@
         android:layout_below="@+id/rating"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/ivPoster2"
-        android:fontFamily="@font/karla"
-        android:paddingLeft="7dp"
-        android:textSize="24sp"
+        android:fontFamily="@font/didact_gothic"
+        android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@+id/ivPoster2"
@@ -62,13 +62,57 @@
         android:layout_below="@+id/ivPoster2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:fontFamily="@font/chivo"
-        android:paddingLeft="9dp"
+        android:fontFamily="@font/didact_gothic"
+        android:paddingLeft="16dp"
         android:paddingTop="5dp"
         android:paddingRight="4dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPoster2"
         tools:text="In 1970s London amidst the punk rock revolution, a young grifter named Estella is determined to make a name for herself with her designs. She befriends a pair of young thieves who appreciate her appetite for mischief, and together they are able to build a life for themselves on the London streets. One day, Estella’s flair for fashion catches the eye of the Baroness von Hellman, a fashion legend who is devastatingly chic and terrifyingly haute. But their relationship sets in motion a course of events and revelations that will cause Estella to embrace her wicked side and become the raucous, fashionable and revenge-bent Cruella." />
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="372dp"
+        android:layout_height="210dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview"
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/playBtn"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="78dp"
+        android:layout_height="66dp"
+        android:drawingCacheQuality="high"
+        android:outlineProvider="none"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/background_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_image"
+        app:layout_constraintVertical_bias="0.534"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <TextView
+        android:id="@+id/PlayTrailer"
+        android:layout_width="123dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/didact_gothic"
+        android:paddingLeft="9dp"
+        android:text="Play Trailer"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/background_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
