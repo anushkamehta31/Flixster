@@ -18,6 +18,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class MovieTrailerActivity extends YouTubeBaseActivity {
 
+    // Instance variables for the Close Button and the binding reference variable
     Button btn;
     private ActivityMovieTrailerBinding binding;
 
@@ -25,6 +26,8 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Instantiate the binding variable using .inflate()
         binding = ActivityMovieTrailerBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
@@ -45,6 +48,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
                                                 YouTubePlayer youTubePlayer, boolean b) {
                 // do any work here to cue video, play video, etc.
                 youTubePlayer.cueVideo(videoId);
+                // Play the video
                 youTubePlayer.play();
             }
 

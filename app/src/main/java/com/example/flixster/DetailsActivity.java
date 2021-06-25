@@ -43,8 +43,6 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_details);
-
         binding = ActivityDetailsBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
@@ -106,9 +104,13 @@ public class DetailsActivity extends AppCompatActivity {
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Create a new intent to pass to MovieTrailerActivity
                 Intent i = new Intent(DetailsActivity.this, MovieTrailerActivity.class);
+                // Pass the videoID of the movie to MovieTrailerActivity
                 i.putExtra(KEY_VIDEO_ID, videoID);
+                // Toast to show that we are now playing the trailer
                 Toast.makeText(DetailsActivity.this, "Playing Trailer", Toast.LENGTH_SHORT).show();
+                // Begin the MovieTrailerActivity
                 startActivity(i);
             }
         });

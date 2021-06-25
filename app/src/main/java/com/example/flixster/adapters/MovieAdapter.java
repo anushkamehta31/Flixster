@@ -78,16 +78,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         TextView tvOverview;
         ImageView ivPoster;
 
-        /*
-        This class is not an activity - however, it uses views from the item_movie.xml file for which a
-        binding class was generated. We can perform activity lookups in Activity, Fragment or Adapter classes.
-        Therefore, we can create a binding instance variable of the class type
-        ItemMovieBinding and use this to grab references to all of our variables.
-         */
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            // Get references to each component
+            // Get references to each component (we can't use view binding for MovieAdapter class)
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
@@ -119,7 +113,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                     == Configuration.ORIENTATION_PORTRAIT ? R.drawable.flicks_movie_placeholder : R.drawable.flicks_backdrop_placeholder;
 
             // Load the imade using Glide and the correct url and placeholder.
-            // Additionally, use .transform to round the corners
+            // Additionally, use .transform() and .fitCenter() to round the corners
             Glide.with(context).load(imageURL).fitCenter()
                     .transform(new RoundedCornersTransformation(30,10))
                     .placeholder(placeholder)

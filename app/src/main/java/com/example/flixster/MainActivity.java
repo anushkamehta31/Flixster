@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //Use view binding to generate an instance variable that contains references to all views
-        // (activity_main.xml -> ActivityMainBindind)
+        // (activity_main.xml -> ActivityMainBinding)
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         // Create view variable for layout of activity
         // (layout of activity is stored in a special property called the root)
