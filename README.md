@@ -36,7 +36,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I struggled with implementing the YouTube Player functionality and determining how to pass the videoID from Details Activity to Movie Trailer Activity. I also had to determine where to make the call to the API and how to pass data. Additionally, I had trouble pushing my walkthrough to Git due to the exceeding file size.
 
 ## Open-source libraries used
 
